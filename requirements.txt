@@ -9,3 +9,4 @@ asyncio==3.4.3
 youtube_search
 ffmpeg-python
 tgcrypto
+python-dotenv
