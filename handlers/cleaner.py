@@ -12,7 +12,7 @@ from helpers.filters import command, other_filters
 downloads = os.path.realpath("downloads")
 raw_files = os.path.realpath("raw_files")
 
-@Client.on_message(command("rmf") & ~filters.edited)
+@Client.on_message(command(["rmf"]) & other_filters)
 @errors
 @authorized_users_only
 async def clear_downloads(_, message: Message):
@@ -25,7 +25,7 @@ async def clear_downloads(_, message: Message):
         await message.reply_text("`Faylın təmizləndiyi tapıldı`")
 
         
-@Client.on_message(command("rmw") & ~filters.edited)
+@Client.on_message(command(["rmw"]) & other_filters)
 @errors
 @authorized_users_only
 async def clear_raw(_, message: Message):
@@ -38,7 +38,7 @@ async def clear_raw(_, message: Message):
         await message.reply_text("`Fayllar hazırdır`")
 
 
-@Client.on_message(commandpro(["/clean"]) & ~filters.edited)
+@Client.on_message(command(["clean"]) & other_filters)
 @errors
 @authorized_users_only
 async def cleanup(_, message: Message):
