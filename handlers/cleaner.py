@@ -7,7 +7,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from helpers.filters import command, other_filters
 from helpers.decorators import authorized_users_only, errors
-from helpers.command import commandpro
+from helpers.filters import command, other_filters
 
 downloads = os.path.realpath("downloads")
 raw_files = os.path.realpath("raw_files")
